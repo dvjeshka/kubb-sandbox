@@ -1,0 +1,22 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "lerna exec --parallel -- yarn dev",
+    "build": "cd packages/lib && yarn build",
+    "lint": "cd packages/lib && yarn lint",
+    "lint:fix": "cd packages/lib && yarn lint:fix",
+    "test": "cd packages/lib && yarn test",
+    "test:watch": "cd packages/lib && yarn test:watch",
+    "up": "lerna version --no-git-tag-version --no-push",
+    "pub": "cd packages/lib && yarn pub",
+    "pub:inguru": "cd packages/lib && yarn pub:inguru"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "lerna": "^9.0.3"
+  }
+}

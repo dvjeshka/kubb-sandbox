@@ -1,0 +1,128 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "OpenAPI definition",
+    "version": "v0"
+  },
+  "paths": {
+    "/api/v1/suspicious-payment-purposes": {
+      "get": {
+        "x-security": false,
+        "operationId": "getSuspiciousPaymentPurposes",
+        "summary": "Directory of suspicious payment purposes.",
+        "responses": {
+          "200": {
+            "description": "Successful execution",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SuspiciousPaymentPurposeResponseDto"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "tags": [
+          "suspicious-payment-purposes-v1"
+        ]
+      }
+    },
+    "/api/v1/suspicious-payment-purposes/{id}": {
+      "delete": {
+        "operationId": "deleteSuspiciousPaymentPurposes",
+        "summary": "Remove an entry from the directory of suspicious payment purposes.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Identifier",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "style": "simple"
+          }
+        ],
+        "responses": {
+          "204": {
+            "$ref": "#/components/responses/204"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "tags": [
+          "suspicious-payment-purposes-v1"
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "SuspiciousPaymentPurposeResponseDto": {
+        "type": "object",
+        "properties": {
+          "statusTest": {
+            "anyOf": [
+              {
+                "enum": [
+                  "ACTIVE",
+                  "INACTIVE",
+                  "PENDING"
+                ]
+              },
+              {
+                "type": "string",
+                "pattern": "^[A-Z_]+$"
+              }
+            ],
+            "description": "Status field with known values and extensible validation"
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "paymentPurpose": {
+            "type": "string"
+          },
+          "isAutoRefund": {
+            "type": "boolean"
+          },
+          "isActive": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "responses": {
+      "204": {
+        "description": "Successfully deleted"
+      },
+      "400": {
+        "description": "Request validation error"
+      },
+      "404": {
+        "description": "Not found"
+      },
+      "500": {
+        "description": "Internal server error"
+      }
+    }
+  }
+}
