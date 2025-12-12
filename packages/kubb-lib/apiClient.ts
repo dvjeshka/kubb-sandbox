@@ -17,7 +17,11 @@ export type ResponseConfig<TData = unknown> = {
 
 export type ResponseErrorConfig<TError = unknown> = TError;
 
-export const client = async <TData, TError = unknown, TVariables = unknown>(config: RequestConfig<TVariables>): Promise<ResponseConfig<TData>> => {
+export type ClientFunction = <TData = unknown, TError = unknown, TVariables = unknown>(
+    config: RequestConfig<TVariables>
+) => Promise<ResponseConfig<TData>>;
+
+export const client: ClientFunction = async (config) => {
     const response = await fetch('https://example.org/post', {
         method: config.method.toUpperCase(),
         body: JSON.stringify(config.data),

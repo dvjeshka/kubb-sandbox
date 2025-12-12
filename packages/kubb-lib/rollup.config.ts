@@ -9,7 +9,7 @@ import alias from '@rollup/plugin-alias';
 // 🔍 Multi-entry: generated/**/!(*.d).ts → dist/...
 const entries = Object.fromEntries(
     globSync('generated/**/!(*.d).ts')
-        .filter(file => !file.includes(sep + 'types' + sep)) // исключаем types/
+        //.filter(file => !file.includes(sep + 'types' + sep)) // исключаем types/
         .map(file => {
             const relPath = relative('', file); // → hooks/useX.ts или api/getX.ts
             const name = relPath.replace(/\.ts$/, '');   // → hooks/useX или api/getX

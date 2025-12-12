@@ -1,19 +1,14 @@
-import { useState } from 'react'
+import {useEffect, useState} from 'react'
 
 import './App.css'
 
 import {getSuspiciousPaymentPurposes} from 'kubb-lib/api/getSuspiciousPaymentPurposes'
-import {type SuspiciousPaymentPurposeResponseDto} from 'kubb-lib/types/SuspiciousPaymentPurposeResponseDto'
+import type {SuspiciousPaymentPurposeResponseDto} from 'kubb-lib/types/SuspiciousPaymentPurposeResponseDto'
 import {useGetSuspiciousPaymentPurposes} from 'kubb-lib/hooks/useGetSuspiciousPaymentPurposes'
 
 function KubbComponent() {
 
-    const [test, setTest] = useState<SuspiciousPaymentPurposeResponseDto>({
-        id: "",
-        paymentPurpose: "",
-        isAutoRefund: false,
-        isActive: false,
-    })
+    const [test, setTest] = useState<SuspiciousPaymentPurposeResponseDto>()
     setTest({
         id: "",
         paymentPurpose: "",
@@ -21,8 +16,10 @@ function KubbComponent() {
         isActive: false,
     })
     console.log(test);
-    console.log(getSuspiciousPaymentPurposes);
-    console.log(useGetSuspiciousPaymentPurposes);
+    useEffect(() => {
+        console.log(getSuspiciousPaymentPurposes());
+        console.log(useGetSuspiciousPaymentPurposes);
+    }, [])
     return (
         <>
             {JSON.stringify(test)}

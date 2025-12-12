@@ -3,14 +3,14 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "main": "./dist/generated/index.cjs",
+  "module": "./dist/generated/index.js",
+  "types": "./dist/generated/index.d.ts",
   "scripts": {
     "build:js": "rollup -c --environment BUILD:js",
     "build:dts": "tsc -p tsconfig.dts.json",
     "build": "npm run build:js && npm run build:dts",
-    "generate": "kubb generate",
-    "dev": "vite",
-    "_build": "rollup -c",
-    "preview": "vite preview"
+    "generate": "kubb generate"
   },
   "peerDependencies": {
     "react": "^19.2.0",
@@ -24,6 +24,9 @@
     "@kubb/plugin-react-query": "^4.9.2",
     "@kubb/plugin-swr": "^4.9.2",
     "@kubb/plugin-ts": "^4.9.2",
+    "@rollup/plugin-alias": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-strip": "^3.0.4",
     "@rollup/plugin-typescript": "^12.3.0",
     "glob": "^13.0.0",
     "openapi-format": "^1.25.2",
@@ -37,38 +40,38 @@
     },
     "./types/*": {
       "import": {
-        "types": "./dist/types/*.d.ts"
+        "types": "./dist/generated/types/*.d.ts"
       },
       "require": {
-        "types": "./dist/types/*.d.ts",
-        "default": "./dist/types/*.cjs"
+        "types": "./dist/generated/types/*.d.ts",
+        "default": "./dist/generated/types/*.cjs"
       }
     },
     "./hooks/*": {
       "import": {
-        "types": "./dist/hooks/*.d.ts",
-        "default": "./dist/hooks/*.js"
+        "types": "./dist/generated/hooks/*.d.ts",
+        "default": "./dist/generated/hooks/*.js"
       },
       "require": {
-        "types": "./dist/hooks/*.d.ts",
-        "default": "./dist/hooks/*.cjs"
+        "types": "./dist/generated/hooks/*.d.ts",
+        "default": "./dist/generated/hooks/*.cjs"
       }
     },
     "./api/*": {
       "import": {
-        "types": "./dist/api/*.d.ts",
-        "default": "./dist/api/*.js"
+        "types": "./dist/generated/api/*.d.ts",
+        "default": "./dist/generated/api/*.js"
       },
       "require": {
-        "types": "./dist/api/*.d.ts",
-        "default": "./dist/api/*.cjs"
+        "types": "./dist/generated/api/*.d.ts",
+        "default": "./dist/generated/api/*.cjs"
       }
     }
   },
   "typesVersions": {
     "*": {
       "*": [
-        "./dist/*"
+        "./dist/generated/*"
       ]
     }
   },

@@ -1,9 +1,7 @@
-import type{RequestConfig, ResponseConfig,ResponseErrorConfig} from 'kubb-lib/apiClient'
+export type * from 'kubb-lib/apiClient';
+import type { ClientFunction } from 'kubb-lib/apiClient'
 
-
-
-
-export const client = async <TData, TError = unknown, TVariables = unknown>(config: RequestConfig<TVariables>): Promise<ResponseConfig<TData>> => {
+export const client:ClientFunction = async (config) => {
     const response = await fetch('https://example.org/post', {
         method: config.method.toUpperCase(),
         body: JSON.stringify(config.data),
@@ -20,4 +18,4 @@ export const client = async <TData, TError = unknown, TVariables = unknown>(conf
     }
 }
 
-export {RequestConfig, ResponseConfig,ResponseErrorConfig}
+export { client as default };

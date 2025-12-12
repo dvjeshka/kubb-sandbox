@@ -8,7 +8,7 @@ import {deleteSuspiciousPaymentPurposes} from 'kubb-lib/api/deleteSuspiciousPaym
 function KubbComponent2() {
 
 
-    console.log(deleteSuspiciousPaymentPurposes);
+    console.log(deleteSuspiciousPaymentPurposes('1'));
     return (
         <>
             {KubbComponent2}
