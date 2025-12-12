@@ -3,11 +3,11 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/axios";
+import fetch from "@apiClient";
 import useSWR from "swr";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/axios";
+import type { RequestConfig, ResponseErrorConfig } from "@apiClient";
 import type { GetSuspiciousPaymentPurposesQueryResponse, GetSuspiciousPaymentPurposes400, GetSuspiciousPaymentPurposes404, GetSuspiciousPaymentPurposes500 } from "../types/GetSuspiciousPaymentPurposes.ts";
-import { getSuspiciousPaymentPurposes } from "../clients/getSuspiciousPaymentPurposes.ts";
+import { getSuspiciousPaymentPurposes } from "../api/getSuspiciousPaymentPurposes.ts";
 
 export const getSuspiciousPaymentPurposesQueryKey = () => [{ url: '/api/v1/suspicious-payment-purposes' }] as const
 

@@ -4,16 +4,88 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95973191-131b-4c94-882e-b132eb1ab702" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/kubb-lib/kubb.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/kubb-lib/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/kubb-lib/petStore.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/kubb-lib/rollup.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/kubb-lib/scripts/generate-barrel-dts.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/kubb-lib/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/sandbox/src/KubbComponent.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/sandbox/src/KubbComponent2.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/sandbox/src/SwrTable.tsx" afterDir="false" />
+    <list default="true" id="95973191-131b-4c94-882e-b132eb1ab702" name="Changes" comment="init">
+      <change afterPath="$PROJECT_DIR$/packages/kubb-lib/apiClient.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/kubb-lib/tsconfig.dts.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/sandbox/src/apiClient.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/clients/deleteSuspiciousPaymentPurposes.cjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/clients/deleteSuspiciousPaymentPurposes.cjs.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/clients/deleteSuspiciousPaymentPurposes.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/clients/deleteSuspiciousPaymentPurposes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/clients/deleteSuspiciousPaymentPurposes.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/clients/getSuspiciousPaymentPurposes.cjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/clients/getSuspiciousPaymentPurposes.cjs.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/clients/getSuspiciousPaymentPurposes.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/clients/getSuspiciousPaymentPurposes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/clients/getSuspiciousPaymentPurposes.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/clients/index.cjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/clients/index.cjs.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/clients/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/clients/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/clients/index.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/hooks/index.cjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/hooks/index.cjs.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/hooks/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/hooks/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/hooks/index.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/hooks/useDeleteSuspiciousPaymentPurposes.cjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/hooks/useDeleteSuspiciousPaymentPurposes.cjs.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/hooks/useDeleteSuspiciousPaymentPurposes.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/hooks/useDeleteSuspiciousPaymentPurposes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/hooks/useDeleteSuspiciousPaymentPurposes.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/hooks/useGetSuspiciousPaymentPurposes.cjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/hooks/useGetSuspiciousPaymentPurposes.cjs.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/hooks/useGetSuspiciousPaymentPurposes.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/hooks/useGetSuspiciousPaymentPurposes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/hooks/useGetSuspiciousPaymentPurposes.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/index.cjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/index.cjs.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/index.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/types/DeleteSuspiciousPaymentPurposes.cjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/types/DeleteSuspiciousPaymentPurposes.cjs.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/types/DeleteSuspiciousPaymentPurposes.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/types/DeleteSuspiciousPaymentPurposes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/types/DeleteSuspiciousPaymentPurposes.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/types/GetSuspiciousPaymentPurposes.cjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/types/GetSuspiciousPaymentPurposes.cjs.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/types/GetSuspiciousPaymentPurposes.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/types/GetSuspiciousPaymentPurposes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/types/GetSuspiciousPaymentPurposes.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/types/SuspiciousPaymentPurposeResponseDto.cjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/types/SuspiciousPaymentPurposeResponseDto.cjs.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/types/SuspiciousPaymentPurposeResponseDto.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/types/SuspiciousPaymentPurposeResponseDto.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/types/SuspiciousPaymentPurposeResponseDto.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/types/index.cjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/types/index.cjs.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/types/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/types/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/dist/generated/types/index.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/generated/.kubb/config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/generated/clients/deleteSuspiciousPaymentPurposes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/generated/clients/getSuspiciousPaymentPurposes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/generated/clients/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/generated/hooks/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/generated/hooks/useDeleteSuspiciousPaymentPurposes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/generated/hooks/useGetSuspiciousPaymentPurposes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/generated/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/generated/schemas/suspiciousPaymentPurposeResponseDto.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/generated/types/DeleteSuspiciousPaymentPurposes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/generated/types/GetSuspiciousPaymentPurposes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/generated/types/SuspiciousPaymentPurposeResponseDto.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/generated/types/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/kubb.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/kubb-lib/kubb.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/kubb-lib/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/rollup.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/kubb-lib/rollup.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/scripts/generate-barrel-dts.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/kubb-lib/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/sandbox/src/KubbComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/sandbox/src/KubbComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/sandbox/src/KubbComponent2.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/sandbox/src/KubbComponent2.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/sandbox/src/SwrTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/sandbox/src/SwrTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +96,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -45,7 +118,7 @@
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/jobs/kub-sandbox/packages/sandbox/src&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/jobs/kub-sandbox/packages/kubb-lib&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -62,6 +135,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\jobs\kub-sandbox\packages\kubb-lib" />
       <recent name="D:\jobs\kub-sandbox\packages\sandbox\src" />
       <recent name="D:\jobs\kub-sandbox\packages\kubb" />
       <recent name="D:\jobs\kub-sandbox\packages\sandbox" />
@@ -145,11 +219,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1765447547141</updated>
-      <workItem from="1765447549584" duration="21803000" />
+      <workItem from="1765447549584" duration="32246000" />
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <option name="closed" value="true" />
+      <created>1765536974160</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1765536974160</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
 </project>

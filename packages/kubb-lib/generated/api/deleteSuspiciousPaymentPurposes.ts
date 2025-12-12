@@ -3,8 +3,8 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/axios";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/axios";
+import fetch from "@apiClient";
+import type { RequestConfig, ResponseErrorConfig } from "@apiClient";
 import type { DeleteSuspiciousPaymentPurposesMutationResponse, DeleteSuspiciousPaymentPurposesPathParams, DeleteSuspiciousPaymentPurposes404, DeleteSuspiciousPaymentPurposes500 } from "../types/DeleteSuspiciousPaymentPurposes.ts";
 
 function getDeleteSuspiciousPaymentPurposesUrl(id: DeleteSuspiciousPaymentPurposesPathParams["id"]) {

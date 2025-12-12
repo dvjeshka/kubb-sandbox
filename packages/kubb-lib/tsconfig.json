@@ -7,10 +7,11 @@
     "skipLibCheck": false,
     "isolatedModules": false,
     "outDir": "dist",
-    "rootDir": "generated",
     "declaration": true,
     "emitDeclarationOnly": false,
     "allowImportingTsExtensions": true
   },
-  "include": ["generated"]
+  "include": [
+    "generated",
+  ]
 }

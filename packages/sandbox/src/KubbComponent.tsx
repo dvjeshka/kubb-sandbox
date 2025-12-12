@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import './App.css'
 
-import {getSuspiciousPaymentPurposes} from 'kubb-lib/clients/getSuspiciousPaymentPurposes'
+import {getSuspiciousPaymentPurposes} from 'kubb-lib/api/getSuspiciousPaymentPurposes'
 import {type SuspiciousPaymentPurposeResponseDto} from 'kubb-lib/types/SuspiciousPaymentPurposeResponseDto'
 import {useGetSuspiciousPaymentPurposes} from 'kubb-lib/hooks/useGetSuspiciousPaymentPurposes'
 

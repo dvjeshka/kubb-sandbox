@@ -12,27 +12,36 @@ export default defineConfig({
     output: {
         path: './generated',
         clean: true,
-        //barrelType:false
+        barrelType:false
     },
     plugins: [
-        pluginOas(),
+        pluginOas({
+            validate: false,
+            generators: [],
+        }),
         pluginTs({
             output: {
                 path:'types',
-                //barrelType:false
+                barrelType:false
             }
         }),
         pluginClient({
             output: {
-                path:'clients',
-                //barrelType:false
-            }
+                path:'api',
+                barrelType:false,
+
+            },
+            importPath: '@apiClient',
         }),
         pluginSwr({
             output: {
                 path:'hooks',
-                //barrelType:false
+                barrelType:false
+            },
+            client:{
+                importPath: '@apiClient',
             }
+
         }),
     ],
 })

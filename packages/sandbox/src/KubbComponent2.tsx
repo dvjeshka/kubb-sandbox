@@ -1,7 +1,7 @@
 
 import './App.css'
 
-import {deleteSuspiciousPaymentPurposes} from 'kubb-lib/clients/deleteSuspiciousPaymentPurposes'
+import {deleteSuspiciousPaymentPurposes} from 'kubb-lib/api/deleteSuspiciousPaymentPurposes'
 
 
 

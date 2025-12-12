@@ -3,7 +3,7 @@ import { mutate } from 'swr';
 import {
     getSuspiciousPaymentPurposesQueryKey,
     useGetSuspiciousPaymentPurposes,
-} from "kubb-lib";
+} from "kubb-lib/hooks/useGetSuspiciousPaymentPurposes";
 import {useDeleteSuspiciousPaymentPurposes} from "kubb-lib/hooks/useDeleteSuspiciousPaymentPurposes";
 
 
@@ -20,7 +20,7 @@ const SwrTable = () => {
                 <tr key={purpose.id}>
                     <td>
                         <button onClick={async () => {
-                            await deletePaymentPurpose({ id:purpose.id = '' });
+                            await deletePaymentPurpose();
                             mutate(getSuspiciousPaymentPurposesQueryKey);
                         }}>
                             Delete {purpose.id}

@@ -3,14 +3,13 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "main": "./dist/generated/index.cjs",
-  "module": "./dist/generated/index.js",
-  "types": "./dist/generated/index.d.ts",
   "scripts": {
+    "build:js": "rollup -c --environment BUILD:js",
+    "build:dts": "tsc -p tsconfig.dts.json",
+    "build": "npm run build:js && npm run build:dts",
     "generate": "kubb generate",
     "dev": "vite",
-    "build": "rollup -c",
-    "_postbuild": "ts-node ./scripts/generate-barrel-dts.ts",
+    "_build": "rollup -c",
     "preview": "vite preview"
   },
   "peerDependencies": {
@@ -25,64 +24,51 @@
     "@kubb/plugin-react-query": "^4.9.2",
     "@kubb/plugin-swr": "^4.9.2",
     "@kubb/plugin-ts": "^4.9.2",
-    "@rollup/plugin-alias": "^6.0.0",
-    "@rollup/plugin-node-resolve": "^16.0.3",
-    "@rollup/plugin-strip": "^3.0.4",
     "@rollup/plugin-typescript": "^12.3.0",
     "glob": "^13.0.0",
     "openapi-format": "^1.25.2",
     "rollup": "^4.53.3",
-    "rollup-plugin-dts": "^6.3.0",
     "ts-node": "^10.9.2",
-    "typescript": "~5.9.3",
-    "use-sync-external-store": "^1.6.0"
+    "typescript": "~5.9.3"
   },
   "exports": {
-    ".": {
-      "import": {
-        "types": "./dist/generated/index.d.ts",
-        "default": "./dist/generated/index.js"
-      },
-      "require": {
-        "types": "./dist/generated/index.d.ts",
-        "default": "./dist/generated/index.cjs"
-      }
+    "./apiClient": {
+      "types": "./dist/apiClient.d.ts"
     },
     "./types/*": {
       "import": {
-        "types": "./dist/generated/types/*.d.ts",
-        "default": "./dist/generated/types/*.js"
+        "types": "./dist/types/*.d.ts"
       },
       "require": {
-        "types": "./dist/generated/types/*.d.ts",
-        "default": "./dist/generated/types/*.cjs"
+        "types": "./dist/types/*.d.ts",
+        "default": "./dist/types/*.cjs"
       }
     },
     "./hooks/*": {
       "import": {
-        "types": "./dist/generated/hooks/*.d.ts",
-        "default": "./dist/generated/hooks/*.js"
+        "types": "./dist/hooks/*.d.ts",
+        "default": "./dist/hooks/*.js"
       },
       "require": {
-        "types": "./dist/generated/hooks/*.d.ts",
-        "default": "./dist/generated/hooks/*.cjs"
+        "types": "./dist/hooks/*.d.ts",
+        "default": "./dist/hooks/*.cjs"
       }
     },
-    "./clients/*": {
+    "./api/*": {
       "import": {
-        "types": "./dist/generated/clients/*.d.ts",
-        "default": "./dist/generated/clients/*.js"
+        "types": "./dist/api/*.d.ts",
+        "default": "./dist/api/*.js"
       },
       "require": {
-        "types": "./dist/generated/clients/*.d.ts",
-        "default": "./dist/generated/clients/*.cjs"
+        "types": "./dist/api/*.d.ts",
+        "default": "./dist/api/*.cjs"
       }
     }
   },
   "typesVersions": {
     "*": {
       "*": [
-        "./dist/generated/*"
+        "./dist/*"
       ]
     }
   },

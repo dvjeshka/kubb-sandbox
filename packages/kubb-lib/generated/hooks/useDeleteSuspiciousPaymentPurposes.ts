@@ -3,12 +3,12 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/axios";
+import fetch from "@apiClient";
 import useSWRMutation from "swr/mutation";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/axios";
+import type { RequestConfig, ResponseErrorConfig } from "@apiClient";
 import type { DeleteSuspiciousPaymentPurposesMutationResponse, DeleteSuspiciousPaymentPurposesPathParams, DeleteSuspiciousPaymentPurposes404, DeleteSuspiciousPaymentPurposes500 } from "../types/DeleteSuspiciousPaymentPurposes.ts";
 import type { SWRMutationConfiguration } from "swr/mutation";
-import { deleteSuspiciousPaymentPurposes } from "../clients/deleteSuspiciousPaymentPurposes.ts";
+import { deleteSuspiciousPaymentPurposes } from "../api/deleteSuspiciousPaymentPurposes.ts";
 
 export const deleteSuspiciousPaymentPurposesMutationKey = () => [{ url: '/api/v1/suspicious-payment-purposes/:id' }] as const
 

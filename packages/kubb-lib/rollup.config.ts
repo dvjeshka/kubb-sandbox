@@ -1,21 +1,23 @@
-import { resolve } from 'path';
+import { resolve, relative, normalize, isAbsolute,sep } from 'path';
 import { globSync } from 'glob';
 import { defineConfig } from 'rollup';
 import typescript from '@rollup/plugin-typescript';
 import { fileURLToPath } from 'node:url';
-import dts from 'rollup-plugin-dts';
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
+import alias from '@rollup/plugin-alias';
 
 // 🔍 Multi-entry: generated/**/!(*.d).ts → dist/...
 const entries = Object.fromEntries(
-    globSync('generated/**/!(*.d).ts').map(file => [
-        file.replace(/^generated\//, '').replace(/\.ts$/, ''),
-        resolve(__dirname, file),
-    ])
+    globSync('generated/**/!(*.d).ts')
+        .filter(file => !file.includes(sep + 'types' + sep)) // исключаем types/
+        .map(file => {
+            const relPath = relative('', file); // → hooks/useX.ts или api/getX.ts
+            const name = relPath.replace(/\.ts$/, '');   // → hooks/useX или api/getX
+            return [name, resolve(__dirname, file)];
+        })
 );
 
 export default defineConfig([
-    // 🔹 Этап 1: сборка JS (ES + CJS)
     {
         input: entries,
         output: [
@@ -35,32 +37,18 @@ export default defineConfig([
                 sourcemap: true,
             },
         ],
-        external: ['swr', 'axios', 'zod', 'react', 'react-dom'],
+        external:['@apiClient'],
         plugins: [
+            alias({
+                entries: [
+                    { find: '@apiClient', replacement: resolve(__dirname, 'apiClient.ts') },
+                ],
+            }),
             typescript({
                 tsconfig: './tsconfig.json',
                 // Не генерируем .d.ts — этим займётся второй конфиг
                 declaration: false,
                 declarationMap: false,
-            }),
-        ],
-    },
-
-    // 🔹 Этап 2: генерация .d.ts
-    {
-        input: entries,
-        output: {
-            dir: 'dist',
-            format: 'es',
-        },
-        plugins: [
-            dts({
-                // rollup-plugin-dts сам вызывает tsc --emitDeclarationOnly
-                tsconfig: './tsconfig.json',
-                compilerOptions: {
-                    rootDir: 'generated',
-                    declarationDir: 'dist',
-                },
             }),
         ],
     },
