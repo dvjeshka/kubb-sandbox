@@ -10,12 +10,15 @@ export declare const deleteSuspiciousPaymentPurposesMutationKey: () => readonly 
     readonly url: "/api/v1/suspicious-payment-purposes/:id";
 }];
 export type DeleteSuspiciousPaymentPurposesMutationKey = ReturnType<typeof deleteSuspiciousPaymentPurposesMutationKey>;
+export type DeleteSuspiciousPaymentPurposesMutationArg = {
+    id: DeleteSuspiciousPaymentPurposesPathParams["id"];
+};
 /**
  * @summary Remove an entry from the directory of suspicious payment purposes.
  * {@link /api/v1/suspicious-payment-purposes/:id}
  */
-export declare function useDeleteSuspiciousPaymentPurposes(id: DeleteSuspiciousPaymentPurposesPathParams["id"], options?: {
-    mutation?: SWRMutationConfiguration<DeleteSuspiciousPaymentPurposesMutationResponse, ResponseErrorConfig<DeleteSuspiciousPaymentPurposes404 | DeleteSuspiciousPaymentPurposes500>, DeleteSuspiciousPaymentPurposesMutationKey | null, never> & {
+export declare function useDeleteSuspiciousPaymentPurposes(options?: {
+    mutation?: SWRMutationConfiguration<DeleteSuspiciousPaymentPurposesMutationResponse, ResponseErrorConfig<DeleteSuspiciousPaymentPurposes404 | DeleteSuspiciousPaymentPurposes500>, DeleteSuspiciousPaymentPurposesMutationKey | null, DeleteSuspiciousPaymentPurposesMutationArg> & {
         throwOnError?: boolean;
     };
     client?: Partial<RequestConfig> & {
@@ -24,4 +27,4 @@ export declare function useDeleteSuspiciousPaymentPurposes(id: DeleteSuspiciousP
     shouldFetch?: boolean;
 }): import("swr/mutation").SWRMutationResponse<any, any, readonly [{
     readonly url: "/api/v1/suspicious-payment-purposes/:id";
-}], never>;
+}], DeleteSuspiciousPaymentPurposesMutationArg>;

@@ -13,5 +13,6 @@
   },
   "include": [
     "generated",
+    "helpers"
   ]
 }

@@ -11,10 +11,10 @@ const deleteSuspiciousPaymentPurposesMutationKey = () => [{ url: '/api/v1/suspic
  * @summary Remove an entry from the directory of suspicious payment purposes.
  * {@link /api/v1/suspicious-payment-purposes/:id}
  */
-function useDeleteSuspiciousPaymentPurposes(id, options = {}) {
+function useDeleteSuspiciousPaymentPurposes(options = {}) {
     const { mutation: mutationOptions, client: config = {}, shouldFetch = true } = options ?? {};
     const mutationKey = deleteSuspiciousPaymentPurposesMutationKey();
-    return useSWRMutation(shouldFetch ? mutationKey : null, async (_url) => {
+    return useSWRMutation(shouldFetch ? mutationKey : null, async (_url, { arg: { id } }) => {
         return deleteSuspiciousPaymentPurposes(id, config);
     }, mutationOptions);
 }

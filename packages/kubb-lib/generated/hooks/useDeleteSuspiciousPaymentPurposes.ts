@@ -14,13 +14,15 @@ export const deleteSuspiciousPaymentPurposesMutationKey = () => [{ url: '/api/v1
 
 export type DeleteSuspiciousPaymentPurposesMutationKey = ReturnType<typeof deleteSuspiciousPaymentPurposesMutationKey>
 
+export type DeleteSuspiciousPaymentPurposesMutationArg = {id: DeleteSuspiciousPaymentPurposesPathParams["id"]}
+
 /**
  * @summary Remove an entry from the directory of suspicious payment purposes.
  * {@link /api/v1/suspicious-payment-purposes/:id}
  */
-export function useDeleteSuspiciousPaymentPurposes(id: DeleteSuspiciousPaymentPurposesPathParams["id"], options: 
+export function useDeleteSuspiciousPaymentPurposes(options: 
 {
-  mutation?: SWRMutationConfiguration<DeleteSuspiciousPaymentPurposesMutationResponse, ResponseErrorConfig<DeleteSuspiciousPaymentPurposes404 | DeleteSuspiciousPaymentPurposes500>, DeleteSuspiciousPaymentPurposesMutationKey | null, never> & { throwOnError?: boolean },
+  mutation?: SWRMutationConfiguration<DeleteSuspiciousPaymentPurposesMutationResponse, ResponseErrorConfig<DeleteSuspiciousPaymentPurposes404 | DeleteSuspiciousPaymentPurposes500>, DeleteSuspiciousPaymentPurposesMutationKey | null, DeleteSuspiciousPaymentPurposesMutationArg> & { throwOnError?: boolean },
   client?: Partial<RequestConfig> & { client?: typeof fetch },
   shouldFetch?: boolean,
 }
@@ -28,9 +30,9 @@ export function useDeleteSuspiciousPaymentPurposes(id: DeleteSuspiciousPaymentPu
   const { mutation: mutationOptions, client: config = {}, shouldFetch = true } = options ?? {}
   const mutationKey = deleteSuspiciousPaymentPurposesMutationKey()
 
-  return useSWRMutation<DeleteSuspiciousPaymentPurposesMutationResponse, ResponseErrorConfig<DeleteSuspiciousPaymentPurposes404 | DeleteSuspiciousPaymentPurposes500>, DeleteSuspiciousPaymentPurposesMutationKey | null>(
+  return useSWRMutation<DeleteSuspiciousPaymentPurposesMutationResponse, ResponseErrorConfig<DeleteSuspiciousPaymentPurposes404 | DeleteSuspiciousPaymentPurposes500>, DeleteSuspiciousPaymentPurposesMutationKey | null, DeleteSuspiciousPaymentPurposesMutationArg>(
     shouldFetch ? mutationKey : null,
-    async (_url) => {
+    async (_url, { arg: { id } }) => {
       return deleteSuspiciousPaymentPurposes(id, config)
     },
     mutationOptions

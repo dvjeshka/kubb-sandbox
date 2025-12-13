@@ -7,16 +7,28 @@ const __dirname = fileURLToPath(new URL('.', import.meta.url));
 import alias from '@rollup/plugin-alias';
 
 // 🔍 Multi-entry: generated/**/!(*.d).ts → dist/...
-const entries = Object.fromEntries(
+const generatedEntries = Object.fromEntries(
     globSync('generated/**/!(*.d).ts')
-        //.filter(file => !file.includes(sep + 'types' + sep)) // исключаем types/
         .map(file => {
-            const relPath = relative('', file); // → hooks/useX.ts или api/getX.ts
-            const name = relPath.replace(/\.ts$/, '');   // → hooks/useX или api/getX
+            const relPath = relative('', file);
+            const name = relPath.replace(/\.ts$/, '');
             return [name, resolve(__dirname, file)];
         })
 );
 
+// 🔍 2. helpers/*.ts → dist/helpers/...
+const helperEntries = Object.fromEntries(
+    globSync('helpers/*.ts')
+        .map(file => {
+            const relPath = relative('', file);
+            const name = relPath.replace(/\.ts$/, '');
+            return [name, resolve(__dirname, file)];
+        })
+);
+const entries = {
+    ...generatedEntries,
+    ...helperEntries,
+};
 export default defineConfig([
     {
         input: entries,

@@ -3,6 +3,7 @@ import { pluginOas } from '@kubb/plugin-oas'
 import { pluginSwr } from '@kubb/plugin-swr'
 import { pluginTs } from '@kubb/plugin-ts'
 import { pluginClient } from '@kubb/plugin-client'
+import {pluginEndpoints} from "./plugins/plugin-endpoints";
 
 export default defineConfig({
     input: {
@@ -19,6 +20,7 @@ export default defineConfig({
             validate: false,
             generators: [],
         }),
+        pluginEndpoints(),
         pluginTs({
             output: {
                 path:'types',
@@ -40,6 +42,9 @@ export default defineConfig({
             },
             client:{
                 importPath: '@apiClient',
+            },
+            mutation:{
+                paramsToTrigger:true
             }
 
         }),

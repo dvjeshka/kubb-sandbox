@@ -35,6 +35,26 @@
     "typescript": "~5.9.3"
   },
   "exports": {
+    "./helpers/*": {
+      "import": {
+        "types": "./dist/helpers/*.d.ts",
+        "default": "./dist/helpers/*.js"
+      },
+      "require": {
+        "types": "./dist/helpers/*.d.ts",
+        "default": "./dist/helpers/*.cjs"
+      }
+    },
+    "./endpoints": {
+      "import": {
+        "types": "./dist/generated/endpoints.d.ts",
+        "default": "./dist/generated/endpoints.js"
+      },
+      "require": {
+        "types": "./dist/generated/endpoints.d.ts",
+        "default": "./dist/generated/endpoints.cjs"
+      }
+    },
     "./apiClient": {
       "types": "./dist/apiClient.d.ts"
     },
@@ -70,6 +90,9 @@
   },
   "typesVersions": {
     "*": {
+      "helpers/*": [
+        "./dist/helpers/*.d.ts"
+      ],
       "*": [
         "./dist/generated/*"
       ]

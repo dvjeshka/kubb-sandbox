@@ -14,7 +14,8 @@ function App() {
     <>
         <SwrTable/>
         <KubbComponent/>
-        <KubbComponent2/>
+      {/*
+        <KubbComponent2/>*/}
 
       <div>
         <a href="https://vite.dev" target="_blank">
