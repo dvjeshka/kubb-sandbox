@@ -25,7 +25,7 @@ export default defineConfig({
         }),
         pluginEndpoints(),
         pluginTs(),
-        pluginMsw({parser:'faker'}),
+        pluginMsw({parser:'faker',handlers:true}),
         pluginFaker({
             seed: [100],
         }),

@@ -1,2 +1,3 @@
 export { deleteSuspiciousPaymentPurposesHandlerResponse204, deleteSuspiciousPaymentPurposesHandlerResponse404, deleteSuspiciousPaymentPurposesHandlerResponse500, deleteSuspiciousPaymentPurposesHandler } from "./deleteSuspiciousPaymentPurposesHandler.ts";
 export { getSuspiciousPaymentPurposesHandlerResponse200, getSuspiciousPaymentPurposesHandlerResponse400, getSuspiciousPaymentPurposesHandlerResponse404, getSuspiciousPaymentPurposesHandlerResponse500, getSuspiciousPaymentPurposesHandler } from "./getSuspiciousPaymentPurposesHandler.ts";
+export { handlers } from "./handlers.ts";

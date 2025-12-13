@@ -9,9 +9,9 @@ import {useDeleteSuspiciousPaymentPurposes} from "kubb-lib/hooks/useDeleteSuspic
 
 const SwrTable = () => {
     const { data: paymentPurposes, isLoading } = useGetSuspiciousPaymentPurposes();
-    const { trigger: deletePaymentPurpose } = useDeleteSuspiciousPaymentPurposes('1');
+    const { trigger: deletePaymentPurpose } = useDeleteSuspiciousPaymentPurposes();
     if (isLoading) return <div>Loading (SWR)...</div>;
-
+    console.log(paymentPurposes);
     return (
         <table>
             <caption>SWR Table</caption>
@@ -20,7 +20,7 @@ const SwrTable = () => {
                 <tr key={purpose.id}>
                     <td>
                         <button onClick={async () => {
-                            await deletePaymentPurpose();
+                            await deletePaymentPurpose({id: purpose.id as string});
                             mutate(getSuspiciousPaymentPurposesQueryKey);
                         }}>
                             Delete {purpose.id}

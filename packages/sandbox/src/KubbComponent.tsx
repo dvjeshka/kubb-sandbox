@@ -15,8 +15,7 @@ function KubbComponent() {
             isAutoRefund: false,
             isActive: false,
         })
-        console.log(getSuspiciousPaymentPurposes);
-        //console.log(useGetSuspiciousPaymentPurposes);
+
     }, [])
     return (
         <>

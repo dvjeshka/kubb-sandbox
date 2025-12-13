@@ -23,7 +23,7 @@ export const client: ClientFunction = async (config) => {
             // throw new Error('Auth required but no token');
         }
     }
-
+    console.log(config.url);
     const response = await fetch(config.url, {
         method: config.method.toUpperCase(),
         body: config.data ? JSON.stringify(config.data) : undefined,

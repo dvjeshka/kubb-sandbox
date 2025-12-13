@@ -2,6 +2,7 @@
 
 var generated_handlers_deleteSuspiciousPaymentPurposesHandler = require('./deleteSuspiciousPaymentPurposesHandler.cjs');
 var generated_handlers_getSuspiciousPaymentPurposesHandler = require('./getSuspiciousPaymentPurposesHandler.cjs');
+var generated_handlers_handlers = require('./handlers.cjs');
 require('../mocks/createDeleteSuspiciousPaymentPurposes.cjs');
 require('@faker-js/faker');
 require('msw');
@@ -19,4 +20,5 @@ exports.getSuspiciousPaymentPurposesHandlerResponse200 = generated_handlers_getS
 exports.getSuspiciousPaymentPurposesHandlerResponse400 = generated_handlers_getSuspiciousPaymentPurposesHandler.getSuspiciousPaymentPurposesHandlerResponse400;
 exports.getSuspiciousPaymentPurposesHandlerResponse404 = generated_handlers_getSuspiciousPaymentPurposesHandler.getSuspiciousPaymentPurposesHandlerResponse404;
 exports.getSuspiciousPaymentPurposesHandlerResponse500 = generated_handlers_getSuspiciousPaymentPurposesHandler.getSuspiciousPaymentPurposesHandlerResponse500;
+exports.handlers = generated_handlers_handlers.handlers;
 //# sourceMappingURL=index.cjs.map
