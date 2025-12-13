@@ -9,7 +9,7 @@
   "scripts": {
     "build:js": "rollup -c --environment BUILD:js",
     "build:dts": "tsc -p tsconfig.dts.json",
-    "build": "npm run build:js && npm run build:dts",
+    "build": "npm run generate && npm run build:js && npm run build:dts",
     "generate": "kubb generate"
   },
   "peerDependencies": {
@@ -17,18 +17,23 @@
     "swr": "^2.3.6"
   },
   "devDependencies": {
-    "@kubb/cli": "^4.9.2",
-    "@kubb/core": "^4.9.2",
-    "@kubb/plugin-client": "^4.9.2",
-    "@kubb/plugin-oas": "^4.9.2",
-    "@kubb/plugin-react-query": "^4.9.2",
-    "@kubb/plugin-swr": "^4.9.2",
-    "@kubb/plugin-ts": "^4.9.2",
+    "@faker-js/faker": "^10.1.0",
+    "@kubb/cli": "^4.11.1",
+    "@kubb/core": "^4.11.1",
+    "@kubb/plugin-client": "^4.11.1",
+    "@kubb/plugin-faker": "^4.11.1",
+    "@kubb/plugin-msw": "^4.11.1",
+    "@kubb/plugin-oas": "^4.11.1",
+    "@kubb/plugin-react-query": "^4.11.1",
+    "@kubb/plugin-swr": "^4.11.1",
+    "@kubb/plugin-ts": "^4.11.1",
+    "@kubb/plugin-zod": "^4.11.1",
     "@rollup/plugin-alias": "^6.0.0",
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/plugin-strip": "^3.0.4",
     "@rollup/plugin-typescript": "^12.3.0",
     "glob": "^13.0.0",
+    "msw": "^2.12.4",
     "openapi-format": "^1.25.2",
     "rollup": "^4.53.3",
     "ts-node": "^10.9.2",
@@ -65,6 +70,36 @@
       "require": {
         "types": "./dist/generated/types/*.d.ts",
         "default": "./dist/generated/types/*.cjs"
+      }
+    },
+    "./zod/*": {
+      "import": {
+        "types": "./dist/generated/zod/*.d.ts",
+        "default": "./dist/generated/zod/*.js"
+      },
+      "require": {
+        "types": "./dist/generated/zod/*.d.ts",
+        "default": "./dist/generated/zod/*.cjs"
+      }
+    },
+    "./mocks/*": {
+      "import": {
+        "types": "./dist/generated/mocks/*.d.ts",
+        "default": "./dist/generated/mocks/*.js"
+      },
+      "require": {
+        "types": "./dist/generated/mocks/*.d.ts",
+        "default": "./dist/generated/mocks/*.cjs"
+      }
+    },
+    "./handlers/*": {
+      "import": {
+        "types": "./dist/generated/handlers/*.d.ts",
+        "default": "./dist/generated/handlers/*.js"
+      },
+      "require": {
+        "types": "./dist/generated/handlers/*.d.ts",
+        "default": "./dist/generated/handlers/*.cjs"
       }
     },
     "./hooks/*": {

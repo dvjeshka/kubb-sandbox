@@ -4,7 +4,7 @@ var generated_endpoints = require('../generated/endpoints.cjs');
 
 const regexCache = new Map();
 function isAuthRequired(config) {
-    const { method, url } = config;
+    const { method, url = '' } = config;
     const pathname = new URL(url, 'http://a').pathname;
     for (const endpoint of generated_endpoints.endpoints) { // ← endpoints — массив, перебираем напрямую
         if (endpoint.method !== method.toUpperCase())

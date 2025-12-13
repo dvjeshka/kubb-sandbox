@@ -2,8 +2,11 @@ import { defineConfig } from '@kubb/core'
 import { pluginOas } from '@kubb/plugin-oas'
 import { pluginSwr } from '@kubb/plugin-swr'
 import { pluginTs } from '@kubb/plugin-ts'
+import { pluginMsw } from '@kubb/plugin-msw'
+import { pluginFaker } from '@kubb/plugin-faker'
+import { pluginZod } from '@kubb/plugin-zod'
 import { pluginClient } from '@kubb/plugin-client'
-import {pluginEndpoints} from "./plugins/plugin-endpoints";
+import { pluginEndpoints } from "./plugins/plugin-endpoints";
 
 export default defineConfig({
     input: {
@@ -21,25 +24,19 @@ export default defineConfig({
             generators: [],
         }),
         pluginEndpoints(),
-        pluginTs({
-            output: {
-                path:'types',
-                barrelType:false
-            }
+        pluginTs(),
+        pluginMsw({parser:'faker'}),
+        pluginFaker({
+            seed: [100],
         }),
+        pluginZod(),
         pluginClient({
             output: {
                 path:'api',
-                barrelType:false,
-
             },
             importPath: '@apiClient',
         }),
         pluginSwr({
-            output: {
-                path:'hooks',
-                barrelType:false
-            },
             client:{
                 importPath: '@apiClient',
             },

@@ -9,6 +9,7 @@ export const pluginEndpoints = definePlugin(() => {
 
         async install() {
             const oas = await this.getOas();
+
             const paths = oas.api?.paths || {};
 
             const endpoints = [];

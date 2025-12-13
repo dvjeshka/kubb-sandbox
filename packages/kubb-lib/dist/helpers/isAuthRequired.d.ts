@@ -1,4 +1,4 @@
 export declare function isAuthRequired(config: {
     method: string;
-    url: string;
+    url?: string;
 }): boolean;

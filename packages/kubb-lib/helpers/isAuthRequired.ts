@@ -1,7 +1,7 @@
 import { endpoints } from '../generated/endpoints';
 const regexCache = new Map<string, RegExp>();
-export function isAuthRequired(config: { method: string; url: string }): boolean {
-    const { method, url } = config;
+export function isAuthRequired(config: { method: string; url?: string }): boolean {
+    const { method, url='' } = config;
     const pathname = new URL(url, 'http://a').pathname;
 
     for (const endpoint of endpoints) { // ← endpoints — массив, перебираем напрямую

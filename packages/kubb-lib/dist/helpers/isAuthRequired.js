@@ -2,7 +2,7 @@ import { endpoints } from '../generated/endpoints.js';
 
 const regexCache = new Map();
 function isAuthRequired(config) {
-    const { method, url } = config;
+    const { method, url = '' } = config;
     const pathname = new URL(url, 'http://a').pathname;
     for (const endpoint of endpoints) { // ← endpoints — массив, перебираем напрямую
         if (endpoint.method !== method.toUpperCase())
