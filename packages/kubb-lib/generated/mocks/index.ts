@@ -1,3 +1,0 @@
-export { createDeleteSuspiciousPaymentPurposesPathParams, createDeleteSuspiciousPaymentPurposes204, createDeleteSuspiciousPaymentPurposes404, createDeleteSuspiciousPaymentPurposes500, createDeleteSuspiciousPaymentPurposesMutationResponse } from "./createDeleteSuspiciousPaymentPurposes.ts";
-export { createGetSuspiciousPaymentPurposes200, createGetSuspiciousPaymentPurposes400, createGetSuspiciousPaymentPurposes404, createGetSuspiciousPaymentPurposes500, createGetSuspiciousPaymentPurposesQueryResponse } from "./createGetSuspiciousPaymentPurposes.ts";
-export { createSuspiciousPaymentPurposeResponseDto } from "./createSuspiciousPaymentPurposeResponseDto.ts";
