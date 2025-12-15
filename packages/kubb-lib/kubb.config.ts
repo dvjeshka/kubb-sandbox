@@ -27,7 +27,7 @@ export default defineConfig({
         pluginTs(),
         pluginMsw({parser:'faker',handlers:true}),
         pluginFaker({
-            seed: [100],
+            seed: 3,
         }),
         pluginZod(),
         pluginClient({

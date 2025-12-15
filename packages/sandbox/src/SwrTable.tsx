@@ -19,6 +19,12 @@ const SwrTable = () => {
             {paymentPurposes?.map((purpose) => (
                 <tr key={purpose.id}>
                     <td>
+                        {purpose.paymentPurpose}
+                    </td>
+                    <td>
+                        {purpose.statusTest}
+                    </td>
+                    <td>
                         <button onClick={async () => {
                             await deletePaymentPurpose({id: purpose.id as string});
                             mutate(getSuspiciousPaymentPurposesQueryKey);

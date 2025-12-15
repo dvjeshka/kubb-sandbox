@@ -4,7 +4,6 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 const KubbComponent = lazy(() => import('./KubbComponent')) ;
-const KubbComponent2 = lazy(() => import('./KubbComponent2')) ;
 const SwrTable = lazy(() => import('./SwrTable')) ;
 
 function App() {
@@ -14,8 +13,6 @@ function App() {
     <>
         <SwrTable/>
         <KubbComponent/>
-        <KubbComponent2/>
-
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

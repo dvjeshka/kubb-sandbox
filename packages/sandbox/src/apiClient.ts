@@ -19,8 +19,8 @@ export const client: ClientFunction = async (config) => {
         signal: config.signal,
         headers,
     });
-
-    const data = await response.json();
+    console.log(response);
+    const data = await response?.json();
 
     return { data, status: response.status, statusText: response.statusText, };
 };

@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react'
 
 import type {SuspiciousPaymentPurposeResponseDto} from 'kubb-lib/types/SuspiciousPaymentPurposeResponseDto'
+import {deleteSuspiciousPaymentPurposes} from "kubb-lib/api/deleteSuspiciousPaymentPurposes";
 
 function KubbComponent() {
 
@@ -13,6 +14,7 @@ function KubbComponent() {
             isAutoRefund: false,
             isActive: false,
         })
+        deleteSuspiciousPaymentPurposes('1').then(r=>console.log(r));
 
     }, [])
     return (
