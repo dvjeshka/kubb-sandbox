@@ -1,4 +1,4 @@
-import { resolve, relative, normalize, isAbsolute,sep } from 'path';
+import { resolve, relative } from 'path';
 import { globSync } from 'glob';
 import { defineConfig } from 'rollup';
 import typescript from '@rollup/plugin-typescript';
@@ -6,29 +6,17 @@ import { fileURLToPath } from 'node:url';
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 import alias from '@rollup/plugin-alias';
 
-// 🔍 Multi-entry: generated/**/!(*.d).ts → dist/...
-const generatedEntries = Object.fromEntries(
-    globSync('generated/**/!(*.d).ts')
-        .map(file => {
-            const relPath = relative('', file);
-            const name = relPath.replace(/\.ts$/, '');
-            return [name, resolve(__dirname, file)];
-        })
-);
+const getEntries = (patterns: string[]) =>
+    Object.fromEntries(
+        patterns.flatMap(pattern =>
+            globSync(pattern).map(file => {
+                const name = relative('', file).replace(/\.ts$/, '');
+                return [name, resolve(__dirname, file)];
+            })
+        )
+    );
 
-// 🔍 2. helpers/*.ts → dist/helpers/...
-const helperEntries = Object.fromEntries(
-    globSync('helpers/*.ts')
-        .map(file => {
-            const relPath = relative('', file);
-            const name = relPath.replace(/\.ts$/, '');
-            return [name, resolve(__dirname, file)];
-        })
-);
-const entries = {
-    ...generatedEntries,
-    ...helperEntries,
-};
+const entries = getEntries(['generated/**/!(*.d).ts', 'helpers/*.ts']);
 export default defineConfig([
     {
         input: entries,

@@ -7,17 +7,12 @@
   "module": "./dist/generated/index.js",
   "types": "./dist/generated/index.d.ts",
   "scripts": {
-    "build:js": "rollup -c --environment BUILD:js",
+    "build:js": "rollup -c",
     "build:dts": "tsc -p tsconfig.dts.json",
     "build": "npm run generate && npm run build:js && npm run build:dts",
     "generate": "kubb generate"
   },
-  "peerDependencies": {
-    "react": "^19.2.0",
-    "swr": "^2.3.6"
-  },
   "devDependencies": {
-    "@faker-js/faker": "^10.1.0",
     "@kubb/cli": "^4.11.1",
     "@kubb/core": "^4.11.1",
     "@kubb/plugin-client": "^4.11.1",
@@ -29,11 +24,8 @@
     "@kubb/plugin-ts": "^4.11.1",
     "@kubb/plugin-zod": "^4.11.1",
     "@rollup/plugin-alias": "^6.0.0",
-    "@rollup/plugin-node-resolve": "^16.0.3",
-    "@rollup/plugin-strip": "^3.0.4",
     "@rollup/plugin-typescript": "^12.3.0",
     "glob": "^13.0.0",
-    "msw": "^2.12.4",
     "openapi-format": "^1.25.2",
     "rollup": "^4.53.3",
     "ts-node": "^10.9.2",
