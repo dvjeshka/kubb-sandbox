@@ -4,7 +4,7 @@ import './index.css'
 import App from './App.tsx'
 
 async function enableMocking() {
-    console.log(import.meta.env.VITE_IS_MOCKING);
+
     if (!import.meta.env.DEV) {
         return
     }

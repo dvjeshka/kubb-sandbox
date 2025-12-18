@@ -5,28 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95973191-131b-4c94-882e-b132eb1ab702" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/sandbox/src/components/AppTable.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/sandbox/src/components/CaseApiComponent.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/sandbox/src/components/CaseHooksComponent.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/sandbox/src/mocks/data.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/kubb.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/kubb-lib/kubb.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/petStore.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/kubb-lib/testStore.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/rollup.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/kubb-lib/rollup.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/sandbox/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/sandbox/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/sandbox/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/sandbox/src/KubbComponent.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/sandbox/src/SwrTable.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/sandbox/src/apiClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/sandbox/src/core/api/apiClient.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/sandbox/src/assets/react.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/sandbox/src/customFaker.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/sandbox/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/sandbox/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/sandbox/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/sandbox/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/sandbox/src/.env.example" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/sandbox/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/sandbox/src/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/sandbox/src/mocks/browser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/sandbox/src/mocks/browser.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/sandbox/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/sandbox/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +55,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/jobs/kub-sandbox/packages/sandbox/src",
+    "last_opened_file_path": "D:/jobs/kub-sandbox/packages/sandbox/src/components",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -84,17 +68,18 @@
     "npm.kubb-lib > generate.executor": "Run",
     "npm.sandbox > build.executor": "Run",
     "npm.sandbox > dev.executor": "Run",
+    "npm.sandbox > test.executor": "Run",
     "ts.external.directory.path": "D:\\jobs\\kub-sandbox\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\jobs\kub-sandbox\packages\sandbox\src\components" />
       <recent name="D:\jobs\kub-sandbox\packages\sandbox\src" />
       <recent name="D:\jobs\kub-sandbox\packages\sandbox\public" />
       <recent name="D:\jobs\kub-sandbox\packages\kubb-lib" />
       <recent name="D:\jobs\kub-sandbox\packages\kubb" />
-      <recent name="D:\jobs\kub-sandbox\packages\sandbox" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\jobs\kub-sandbox\packages\sandbox\src\core\api" />
@@ -102,7 +87,7 @@
       <recent name="D:\jobs\kub-sandbox\packages" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.kubb-lib &gt; build">
+  <component name="RunManager" selected="npm.sandbox &gt; test">
     <configuration name="kubb-lib &gt; build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/packages/kubb-lib/package.json" />
       <command value="run" />
@@ -118,16 +103,6 @@
       <command value="run" />
       <scripts>
         <script value="build:dts" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="kubb-lib &gt; build:js" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/packages/kubb-lib/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="build:js" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -153,13 +128,23 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="sandbox &gt; test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/packages/sandbox/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.sandbox &gt; test" />
         <item itemvalue="npm.sandbox &gt; dev" />
         <item itemvalue="npm.kubb-lib &gt; build" />
         <item itemvalue="npm.kubb-lib &gt; generate" />
         <item itemvalue="npm.kubb-lib &gt; build:dts" />
-        <item itemvalue="npm.kubb-lib &gt; build:js" />
       </list>
     </recent_temporary>
   </component>
@@ -178,7 +163,7 @@
       <option name="presentableId" value="Default" />
       <updated>1765447547141</updated>
       <workItem from="1765447549584" duration="63073000" />
-      <workItem from="1766057161730" duration="12747000" />
+      <workItem from="1766057161730" duration="19551000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -260,7 +245,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765815402946</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="update">
+      <option name="closed" value="true" />
+      <created>1766074045228</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1766074045228</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
