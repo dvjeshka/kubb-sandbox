@@ -28,14 +28,6 @@ export default defineConfig([
                 chunkFileNames: 'chunks/[name]-[hash].js',
                 sourcemap: true,
             },
-            {
-                dir: 'dist',
-                format: 'cjs',
-                entryFileNames: '[name].cjs',
-                chunkFileNames: 'chunks/[name]-[hash].cjs',
-                exports: 'named',
-                sourcemap: true,
-            },
         ],
         external:['@apiClient'],
         plugins: [

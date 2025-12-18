@@ -11,7 +11,7 @@ import { pluginEndpoints } from "./plugins/plugin-endpoints";
 export default defineConfig({
     input: {
         //path: 'https://petstore.swagger.io/v2/swagger.json'
-        path: './petStore.json'
+        path: './testStore.json'
     },
     output: {
         path: './generated',
@@ -26,9 +26,7 @@ export default defineConfig({
         pluginEndpoints(),
         pluginTs(),
         pluginMsw({parser:'faker',handlers:true}),
-        pluginFaker({
-            seed: 3,
-        }),
+        pluginFaker(),
         pluginZod(),
         pluginClient({
             output: {

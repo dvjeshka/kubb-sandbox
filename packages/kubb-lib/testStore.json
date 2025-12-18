@@ -5,11 +5,11 @@
     "version": "v0"
   },
   "paths": {
-    "/api/v1/suspicious-payment-purposes": {
+    "/api/v1/list": {
       "get": {
         "x-security": false,
-        "operationId": "getSuspiciousPaymentPurposes",
-        "summary": "Directory of suspicious payment purposes.",
+        "operationId": "getList",
+        "summary": "List",
         "responses": {
           "200": {
             "description": "Successful execution",
@@ -18,7 +18,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/SuspiciousPaymentPurposeResponseDto"
+                    "$ref": "#/components/schemas/ListDto"
                   }
                 }
               }
@@ -35,24 +35,24 @@
           }
         },
         "tags": [
-          "suspicious-payment-purposes-v1"
+          "list-v1"
         ]
       }
     },
-    "/api/v1/suspicious-payment-purposes/{id}": {
+    "/api/v1/list/{id}": {
       "delete": {
-        "operationId": "deleteSuspiciousPaymentPurposes",
+        "operationId": "deleteItem",
         "summary": "Remove an entry from the directory of suspicious payment purposes.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "description": "Identifier",
-            "required": true,
             "schema": {
               "type": "string",
               "format": "uuid"
             },
+            "required": true,
             "style": "simple"
           }
         ],
@@ -68,17 +68,18 @@
           }
         },
         "tags": [
-          "suspicious-payment-purposes-v1"
+          "list-v1"
         ]
       }
     }
   },
   "components": {
     "schemas": {
-      "SuspiciousPaymentPurposeResponseDto": {
+      "ListDto": {
         "type": "object",
+        "required": ["id", "text", "isActive","status"],
         "properties": {
-          "statusTest": {
+          "status": {
             "anyOf": [
               {
                 "enum": [
@@ -98,11 +99,8 @@
             "type": "string",
             "format": "uuid"
           },
-          "paymentPurpose": {
+          "text": {
             "type": "string"
-          },
-          "isAutoRefund": {
-            "type": "boolean"
           },
           "isActive": {
             "type": "boolean"

@@ -4,17 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95973191-131b-4c94-882e-b132eb1ab702" name="Changes" comment="apiclient">
-      <change afterPath="$PROJECT_DIR$/packages/sandbox/src/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/sandbox/src/customFaker.ts" afterDir="false" />
+    <list default="true" id="95973191-131b-4c94-882e-b132eb1ab702" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/sandbox/src/components/AppTable.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/sandbox/src/components/CaseApiComponent.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/sandbox/src/components/CaseHooksComponent.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/sandbox/src/mocks/data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/kubb-lib/kubb.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/kubb-lib/kubb.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/petStore.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/kubb-lib/testStore.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/rollup.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/kubb-lib/rollup.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/sandbox/src/App.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/sandbox/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/sandbox/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/sandbox/src/KubbComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/sandbox/src/KubbComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/sandbox/src/KubbComponent2.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/sandbox/src/SwrTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/sandbox/src/SwrTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/sandbox/src/apiClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/sandbox/src/apiClient.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/sandbox/src/KubbComponent.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/sandbox/src/SwrTable.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/sandbox/src/apiClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/sandbox/src/core/api/apiClient.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/sandbox/src/assets/react.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/sandbox/src/customFaker.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/sandbox/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/sandbox/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/sandbox/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/sandbox/src/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/sandbox/src/mocks/browser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/sandbox/src/mocks/browser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/sandbox/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/sandbox/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,39 +64,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/jobs/kub-sandbox/packages/sandbox/src&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.kubb &gt; openapi-format.executor&quot;: &quot;Run&quot;,
-    &quot;npm.kubb-lib &gt; build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.kubb-lib &gt; build:dts.executor&quot;: &quot;Run&quot;,
-    &quot;npm.kubb-lib &gt; build:js.executor&quot;: &quot;Run&quot;,
-    &quot;npm.kubb-lib &gt; generate.executor&quot;: &quot;Run&quot;,
-    &quot;npm.sandbox &gt; build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.sandbox &gt; dev.executor&quot;: &quot;Run&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\jobs\\kub-sandbox\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/jobs/kub-sandbox/packages/sandbox/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.kubb > openapi-format.executor": "Run",
+    "npm.kubb-lib > build.executor": "Run",
+    "npm.kubb-lib > build:dts.executor": "Run",
+    "npm.kubb-lib > build:js.executor": "Run",
+    "npm.kubb-lib > generate.executor": "Run",
+    "npm.sandbox > build.executor": "Run",
+    "npm.sandbox > dev.executor": "Run",
+    "ts.external.directory.path": "D:\\jobs\\kub-sandbox\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\jobs\kub-sandbox\packages\sandbox\src" />
-      <recent name="D:\jobs\kub-sandbox\packages\kubb-lib" />
       <recent name="D:\jobs\kub-sandbox\packages\sandbox\public" />
+      <recent name="D:\jobs\kub-sandbox\packages\kubb-lib" />
       <recent name="D:\jobs\kub-sandbox\packages\kubb" />
       <recent name="D:\jobs\kub-sandbox\packages\sandbox" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\jobs\kub-sandbox\packages\sandbox\src\core\api" />
+      <recent name="D:\jobs\kub-sandbox\packages\sandbox\src\components" />
       <recent name="D:\jobs\kub-sandbox\packages" />
     </key>
   </component>
@@ -141,8 +155,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.kubb-lib &gt; build" />
         <item itemvalue="npm.sandbox &gt; dev" />
+        <item itemvalue="npm.kubb-lib &gt; build" />
         <item itemvalue="npm.kubb-lib &gt; generate" />
         <item itemvalue="npm.kubb-lib &gt; build:dts" />
         <item itemvalue="npm.kubb-lib &gt; build:js" />
@@ -163,7 +177,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1765447547141</updated>
-      <workItem from="1765447549584" duration="57556000" />
+      <workItem from="1765447549584" duration="63073000" />
+      <workItem from="1766057161730" duration="12747000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -237,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765810241468</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update">
+      <option name="closed" value="true" />
+      <created>1765815402946</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1765815402946</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +269,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="apiclient" />
-    <option name="LAST_COMMIT_MESSAGE" value="apiclient" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>

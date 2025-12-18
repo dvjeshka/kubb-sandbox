@@ -1,8 +1,10 @@
 export type * from 'kubb-lib/apiClient';
 import type { ClientFunction } from 'kubb-lib/apiClient'
-import {isAuthRequired} from 'kubb-lib/helpers/isAuthRequired'
+import { isAuthRequired } from 'kubb-lib/helpers/isAuthRequired'
+import { ofetch } from "ofetch";
 export const client: ClientFunction = async (config) => {
-    const requiresAuth = isAuthRequired({ method: config.method, url: config.url });
+    const url = config.url ?? ''
+    const requiresAuth = isAuthRequired({ method: config.method, url });
     // Копируем headers, чтобы не мутировать входящий объект
     const headers = new Headers(config.headers);
     // Добавляем токен, если требуется
@@ -10,19 +12,21 @@ export const client: ClientFunction = async (config) => {
         const token = localStorage.getItem('token'); // или из context/store
         if (token) {
             headers.set('Authorization', `Bearer ${token}`);
-        } else {
         }
     }
-    const response = await fetch(config.url ?? '', {
+    const response = await ofetch(url, {
         method: config.method.toUpperCase(),
         body: config.data ? JSON.stringify(config.data) : undefined,
         signal: config.signal,
         headers,
+        async onRequest({ request, options }) {
+            // Log request
+            console.log("[fetch request]", request, options);
+        },
     });
-    console.log(response);
-    const data = await response?.json();
 
-    return { data, status: response.status, statusText: response.statusText, };
+
+    return { data:response, status: response?.status, statusText: response?.statusText, };
 };
 
 export { client as default };

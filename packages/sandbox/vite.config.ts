@@ -5,12 +5,10 @@ import path from 'path';
 export default defineConfig({
     resolve: {
         alias: {
-            // Alias '@' to the 'src' directory
-            '@apiClient': path.resolve(__dirname, './src/apiClient'),
+            '@apiClient': path.resolve(__dirname, './src/core/api/apiClient'),
         }
     },
   plugins: [
-
     react({
       babel: {
         plugins: [['babel-plugin-react-compiler']],
