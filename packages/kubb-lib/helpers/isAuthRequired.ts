@@ -15,8 +15,6 @@ export function isAuthRequired(config: { method: string; url?: string }): boolea
             regexCache.set(endpoint.path, regex);
         }
 
-
-
         if (regex.test(pathname)) {
             return endpoint.requiresAuth;
         }

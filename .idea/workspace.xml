@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95973191-131b-4c94-882e-b132eb1ab702" name="Changes" comment="update">
+    <list default="true" id="95973191-131b-4c94-882e-b132eb1ab702" name="Changes" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/helpers/isAuthRequired.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/kubb-lib/helpers/isAuthRequired.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/kubb-lib/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/kubb-lib/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/sandbox/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/sandbox/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/sandbox/src/.env.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/sandbox/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/sandbox/src/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/sandbox/src/components/CaseHooksComponent.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/sandbox/src/components/CaseHooksComponent.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/sandbox/src/components/CaseHooksComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/sandbox/src/components/CaseHooksComponent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/sandbox/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/sandbox/vite.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
@@ -98,21 +100,21 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="kubb-lib &gt; build:dts" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/packages/kubb-lib/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="build:dts" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="kubb-lib &gt; generate" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/packages/kubb-lib/package.json" />
       <command value="run" />
       <scripts>
         <script value="generate" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="sandbox &gt; build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/packages/sandbox/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -143,8 +145,8 @@
         <item itemvalue="npm.sandbox &gt; test" />
         <item itemvalue="npm.sandbox &gt; dev" />
         <item itemvalue="npm.kubb-lib &gt; build" />
+        <item itemvalue="npm.sandbox &gt; build" />
         <item itemvalue="npm.kubb-lib &gt; generate" />
-        <item itemvalue="npm.kubb-lib &gt; build:dts" />
       </list>
     </recent_temporary>
   </component>
@@ -163,7 +165,7 @@
       <option name="presentableId" value="Default" />
       <updated>1765447547141</updated>
       <workItem from="1765447549584" duration="63073000" />
-      <workItem from="1766057161730" duration="19551000" />
+      <workItem from="1766057161730" duration="31889000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -253,7 +255,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766074045228</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="test">
+      <option name="closed" value="true" />
+      <created>1766087588336</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1766087588336</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +273,7 @@
     <MESSAGE value="init" />
     <MESSAGE value="apiclient" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
 </project>

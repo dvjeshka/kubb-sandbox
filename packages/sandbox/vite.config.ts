@@ -2,13 +2,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path';
-import {playwright} from "@vitest/browser-playwright";
+import { playwright } from "@vitest/browser-playwright";
 
 export default defineConfig({
     test: {
         browser: {
             enabled: true,
-            headless: false,
+            headless: true,
             provider: playwright(),
             instances: [
                 { browser: 'chromium' },
@@ -23,5 +23,4 @@ export default defineConfig({
   plugins: [
     react(),
   ],
-
 })

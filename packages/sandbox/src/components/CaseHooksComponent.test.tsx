@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi, beforeEach, } from 'vitest';
 import { render } from 'vitest-browser-react';
 import CaseHooksComponent from './CaseHooksComponent';
 import { LIST_DTO } from '../mocks/data';
@@ -50,7 +50,14 @@ describe('CaseHooksComponent', () => {
             .click();
 
         // Проверяем, что trigger был вызван с правильными параметрами
-        expect(mockTrigger).toHaveBeenCalledWith({ id: '1' });
+        expect(mockTrigger).toHaveBeenCalledWith(
+            { id: '1' },
+            expect.objectContaining({ onSuccess: expect.any(Function) })
+        );
+        // Проверяем, что элемент был удален из списка
+        //await expect.element(getByText('text1')).not.toBeInTheDocument()
+        await expect.element(getByText('text2')).toBeInTheDocument()
+        await expect.element(getByText('text3')).toBeInTheDocument()
     });
 
 });
